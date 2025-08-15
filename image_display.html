@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to My Image Viewer</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    #image-container { width: 500px; height: 300px; border: 1px solid #ccc; display: flex; align-items: center; justify-content: center; margin-top: 20px; background: #fafafa; }
+    #feedback { color: red; margin-top: 15px; }
+    label { margin-right: 8px; }
+  </style>
+</head>
+<body>
+  <h2>Welcome to My Image Viewer</h2>
+  <form id="imageForm" onsubmit="return false;">
+    <label for="imageNumber">Image number:</label>
+    <input type="text" id="imageNumber" name="imageNumber" />
+    <button id="openBtn">Open</button>
+  </form>
+  <div id="image-container">
+    <!-- Image will show up here -->
+  </div>
+  <div id="feedback"></div>
+
+  <script>
+    document.getElementById('openBtn').addEventListener('click', function() {
+      var imgNum = document.getElementById('imageNumber').value.trim();
+      var img = document.createElement('img');
+      img.src = 'images/' + imgNum + '.jpg'; // Image files should be named like "1.jpg"
+
+      // Reset things
+      document.getElementById('image-container').innerHTML = '';
+      document.getElementById('feedback').textContent = '';
+
+      // Try to load image
+      img.onload = function() {
+        img.width = 500;
+        img.height = 300;
+        document.getElementById('image-container').appendChild(img);
+      };
+      img.onerror = function() {
+        document.getElementById('feedback').textContent = 'Image with number "' + imgNum + '" was not found.';
+      };
+    });
+  </script>
+</body>
+</html>

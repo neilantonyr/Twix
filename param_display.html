@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Display URL Parameters</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .param { margin: 10px 0; }
+  </style>
+</head>
+<body>
+  <h1>URL Parameter Reader</h1>
+  
+  <div class="param">Number of Players: <span id="numplayer"></span></div>
+  <div class="param">Contest ID: <span id="contestid"></span></div>
+  
+  <script>
+    // Get the query string from the URL
+    const queryString = window.location.search;
+    
+    // Parse parameters
+    const urlParams = new URLSearchParams(queryString);
+    
+    // Get values of the parameters
+    const numplayer = urlParams.get('numplayer');
+    const contestid = urlParams.get('contestid');
+    
+    // Display them in the HTML
+    document.getElementById('numplayer').textContent = numplayer ?? ' not provided';
+    document.getElementById('contestid').textContent = contestid ?? ' not provided';
+  </script>
+</body>
+</html>
