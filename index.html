@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Question Viewer</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+    #question {
+      font-size: 120px;
+      font-weight: bold;
+      text-align: center;
+      word-wrap: break-word;
+      max-width: 90%;
+    }
+    #info {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      font-size: 18px;
+      text-align: right;
+    }
+    #info span {
+      display: block;
+    }
+    #orientation {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 14px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div id="orientation">use landscape mode</div>
+  <div id="question">Loading...</div>
+  <div id="info"></div>
+
+  <script>
+    // Random theme colors
+    const textColors = ["darkgreen", "darkblue", "darkred"];
+    const bgColors = ["#f5f5dc", "lightblue", "lightcoral"]; 
+    // beige = #f5f5dc
+
+    // Apply random theme
+    document.body.style.backgroundColor = bgColors[Math.floor(Math.random() * bgColors.length)];
+    document.body.style.color = textColors[Math.floor(Math.random() * textColors.length)];
+
+    // Function to get URL parameters
+    function getQueryParams() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        ContestID: params.get("ContestID"),
+        PlayerNumber: params.get("PlayerNumber")
+      };
+    }
+
+    async function loadQuestion() {
+      const { ContestID, PlayerNumber } = getQueryParams();
+
+      // Display ContestID & PlayerNumber at bottom right
+      const infoDiv = document.getElementById("info");
+      infoDiv.innerHTML = `
+        <span>Contest ID: ${ContestID ? ContestID : "-"}</span>
+        <span>Player Number: ${PlayerNumber ? PlayerNumber : "-"}</span>
+      `;
+
+      // Handle missing URL params
+      if (!ContestID || !PlayerNumber) {
+        document.getElementById("question").innerText = "Missing parameters";
+        return;
+      }
+
+      try {
+        const response = await fetch("data/questions.json");
+        const data = await response.json();
+
+        // Match from JSON
+        const match = data.find(
+          item => item.ContestID === ContestID && item.PlayerNumber === PlayerNumber
+        );
+
+        if (match) {
+          document.getElementById("question").innerText = match.QuestionPhrase;
+        } else {
+          document.getElementById("question").innerText = "No match found";
+        }
+      } catch (error) {
+        document.getElementById("question").innerText = "Error loading JSON";
+        console.error(error);
+      }
+    }
+
+    // Refresh page whenever orientation changes
+    window.addEventListener("orientationchange", () => {
+      location.reload();
+    });
+
+    loadQuestion();
+  </script>
+</body>
+</html>
