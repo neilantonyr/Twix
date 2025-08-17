@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question Phrase Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 40px;
+        }
+        .label {
+            font-size: 18px;
+            color: #333;
+        }
+        .question {
+            font-size: 48px;
+            font-weight: bold;
+            color: #0066cc;
+            margin-top: 40px;
+            text-align: center;
+        }
+        .error {
+            font-size: 28px;
+            color: #cc0000;
+            margin-top: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="label">Contest ID: <span id="contestid"></span></div>
+    <div class="label">Player Number: <span id="playernum"></span></div>
+    <div id="output"></div>
+    <script>
+        // Read URL parameters
+        const params = new URLSearchParams(window.location.search);
+        const contestID = params.get('ContestID');
+        const playerNumber = params.get('PlayerNumber');
+        document.getElementById('contestid').textContent = contestID ?? 'Not provided';
+        document.getElementById('playernum').textContent = playerNumber ?? 'Not provided';
+
+        const outputDiv = document.getElementById('output');
+
+        if (contestID && playerNumber) {
+            fetch('data/questions.json')
+                .then(response => {
+                    if (!response.ok) throw new Error('Could not load questions.json');
+                    return response.json();
+                })
+                .then(data => {
+                    const match = data.find(
+                        obj => obj.ContestID === contestID && obj.PlayerNumber === playerNumber
+                    );
+                    if (match) {
+                        outputDiv.innerHTML = `<div class="question">${match.QuestionPhrase}</div>`;
+                    } else {
+                        outputDiv.innerHTML = `<div class="error">No matching question found.</div>`;
+                    }
+                })
+                .catch(error => {
+                    outputDiv.innerHTML = `<div class="error">Error loading data.</div>`;
+                });
+        } else {
+            outputDiv.innerHTML = `<div class="error">Missing ContestID or PlayerNumber in URL.</div>`;
+        }
+    </script>
+</body>
+</html>
