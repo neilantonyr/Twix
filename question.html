@@ -11,39 +11,51 @@
       height: 100vh;
       margin: 0;
       font-family: Arial, sans-serif;
+      position: relative;
+      overflow: hidden;
     }
     #question {
       font-size: 120px;
       font-weight: bold;
       text-align: center;
+      word-wrap: break-word;
+      max-width: 90%;
     }
     #info {
       position: absolute;
-      bottom: 10px;
+      bottom: 20px;
       right: 20px;
       font-size: 18px;
       text-align: right;
-      line-height: 1.4em;
+    }
+    #info span {
+      display: block;
+    }
+    #orientation {
+      position: absolute;
+      top: 10px;
+      left: 20px;
+      font-size: 14px;
+      font-style: italic;
     }
   </style>
 </head>
 <body>
+  <div id="orientation">use landscape mode</div>
   <div id="question">Loading...</div>
   <div id="info"></div>
 
   <script>
-    // Random color options
+    // Random theme colors
     const textColors = ["darkgreen", "darkblue", "darkred"];
-    const bgColors = ["#f5f5dc", "#add8e6", "#ffcccb"]; 
-    // (light beige, light blue, light red)
+    const bgColors = ["#f5f5dc", "lightblue", "lightcoral"]; 
+    // beige = #f5f5dc
 
-    // Pick random text color & background
-    const chosenTextColor = textColors[Math.floor(Math.random() * textColors.length)];
-    const chosenBgColor = bgColors[Math.floor(Math.random() * bgColors.length)];
-    document.body.style.color = chosenTextColor;
-    document.body.style.backgroundColor = chosenBgColor;
+    // Apply random theme
+    document.body.style.backgroundColor = bgColors[Math.floor(Math.random() * bgColors.length)];
+    document.body.style.color = textColors[Math.floor(Math.random() * textColors.length)];
 
-    // Function to read URL params
+    // Function to get URL parameters
     function getQueryParams() {
       const params = new URLSearchParams(window.location.search);
       return {
@@ -55,6 +67,14 @@
     async function loadQuestion() {
       const { ContestID, PlayerNumber } = getQueryParams();
 
+      // Display ContestID & PlayerNumber at bottom right
+      const infoDiv = document.getElementById("info");
+      infoDiv.innerHTML = `
+        <span>Contest ID: ${ContestID ? ContestID : "-"}</span>
+        <span>Player Number: ${PlayerNumber ? PlayerNumber : "-"}</span>
+      `;
+
+      // Handle missing URL params
       if (!ContestID || !PlayerNumber) {
         document.getElementById("question").innerText = "Missing parameters";
         return;
@@ -64,7 +84,7 @@
         const response = await fetch("data/questions.json");
         const data = await response.json();
 
-        // Find the matching entry
+        // Match from JSON
         const match = data.find(
           item => item.ContestID === ContestID && item.PlayerNumber === PlayerNumber
         );
@@ -74,15 +94,16 @@
         } else {
           document.getElementById("question").innerText = "No match found";
         }
-
-        // Update info panel
-        document.getElementById("info").innerHTML = 
-          `Contest ID: ${ContestID}<br>Player Number: ${PlayerNumber}`;
       } catch (error) {
         document.getElementById("question").innerText = "Error loading JSON";
         console.error(error);
       }
     }
+
+    // Refresh page whenever orientation changes
+    window.addEventListener("orientationchange", () => {
+      location.reload();
+    });
 
     loadQuestion();
   </script>
