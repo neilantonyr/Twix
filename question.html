@@ -1,69 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Question Phrase Display</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            margin: 40px;
-        }
-        .label {
-            font-size: 18px;
-            color: #333;
-        }
-        .question {
-            font-size: 120px;
-            font-weight: bold;
-            color: #0066cc;
-            margin-top: 40px;
-            text-align: center;
-        }
-        .error {
-            font-size: 28px;
-            color: #cc0000;
-            margin-top: 40px;
-            text-align: center;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Question Viewer</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    #question {
+      font-size: 120px;
+      font-weight: bold;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-    <div class="label">Contest ID: <span id="contestid"></span></div>
-    <div class="label">Player Number: <span id="playernum"></span></div>
-    <div id="output"></div>
-    <script>
-        // Read URL parameters
-        const params = new URLSearchParams(window.location.search);
-        const contestID = params.get('ContestID');
-        const playerNumber = params.get('PlayerNumber');
-        document.getElementById('contestid').textContent = contestID ?? 'Not provided';
-        document.getElementById('playernum').textContent = playerNumber ?? 'Not provided';
+  <div id="question">Loading...</div>
 
-        const outputDiv = document.getElementById('output');
+  <script>
+    // Function to read URL parameters
+    function getQueryParams() {
+      const params = new URLSearchParams(window.location.search);
+      return {
+        ContestID: params.get("ContestID"),
+        PlayerNumber: params.get("PlayerNumber")
+      };
+    }
 
-        if (contestID && playerNumber) {
-            fetch('data/questions.json')
-                .then(response => {
-                    if (!response.ok) throw new Error('Could not load questions.json');
-                    return response.json();
-                })
-                .then(data => {
-                    const match = data.find(
-                        obj => obj.ContestID === contestID && obj.PlayerNumber === playerNumber
-                    );
-                    if (match) {
-                        outputDiv.innerHTML = `<div class="question">${match.QuestionPhrase}</div>`;
-                    } else {
-                        outputDiv.innerHTML = `<div class="error">No matching question found.</div>`;
-                    }
-                })
-                .catch(error => {
-                    outputDiv.innerHTML = `<div class="error">Error loading data.</div>`;
-                });
+    async function loadQuestion() {
+      const { ContestID, PlayerNumber } = getQueryParams();
+      
+      if (!ContestID || !PlayerNumber) {
+        document.getElementById("question").innerText = "Missing parameters";
+        return;
+      }
+
+      try {
+        const response = await fetch("data/questions.json");
+        const data = await response.json();
+
+        // Traverse JSON to find matching entry
+        const match = data.find(
+          item => item.ContestID === ContestID && item.PlayerNumber === PlayerNumber
+        );
+
+        if (match) {
+          document.getElementById("question").innerText = match.QuestionPhrase;
         } else {
-            outputDiv.innerHTML = `<div class="error">Missing ContestID or PlayerNumber in URL.</div>`;
+          document.getElementById("question").innerText = "No match found";
         }
-    </script>
+      } catch (error) {
+        document.getElementById("question").innerText = "Error loading JSON";
+        console.error(error);
+      }
+    }
+
+    loadQuestion();
+  </script>
 </body>
 </html>
