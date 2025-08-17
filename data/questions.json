@@ -1,0 +1,200 @@
+[
+  {
+    "ContestID": "3-A",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "Empathize"
+  },
+  {
+    "ContestID": "3-A",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Ideate"
+  },
+  {
+    "ContestID": "3-A",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Prototype"
+  },
+  {
+    "ContestID": "3-B",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "Desirability"
+  },
+ {
+    "ContestID": "3-B",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Feasibility"
+  },
+  {
+    "ContestID": "3-B",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Viability"
+  },
+ {
+    "ContestID": "5-A",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "Launch"
+  },
+  {
+    "ContestID": "5-A",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Ideation"
+  },
+  {
+    "ContestID": "5-A",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Testing"
+  },
+  {
+    "ContestID": "5-A",
+    "PlayerNumber": "4",
+    "QuestionPhrase": "Development"
+  },
+  {
+    "ContestID": "5-A",
+    "PlayerNumber": "5",
+    "QuestionPhrase": "Prototype"
+  },    
+    
+{
+    "ContestID": "6-A",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "Infosys Mangalore"
+  },
+  {
+    "ContestID": "6-A",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Infosys Bangalore"
+  },
+  {
+    "ContestID": "6-A",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Infosys Pune"
+  },
+  {
+    "ContestID": "6-A",
+    "PlayerNumber": "4",
+    "QuestionPhrase": "1996"
+  },
+  {
+    "ContestID": "6-A",
+    "PlayerNumber": "5",
+    "QuestionPhrase": "1995"
+  },
+  {
+    "ContestID": "6-A",
+    "PlayerNumber": "6",
+    "QuestionPhrase": "1983"
+  }, 
+
+ {
+    "ContestID": "6-B",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "use"
+  },
+  {
+    "ContestID": "6-B",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Ethereum"
+  },
+  {
+    "ContestID": "6-B",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Blockchain"
+  },
+  {
+    "ContestID": "6-B",
+    "PlayerNumber": "4",
+    "QuestionPhrase": "and"
+  },
+  {
+    "ContestID": "6-B",
+    "PlayerNumber": "5",
+    "QuestionPhrase": "Bitcoin"
+  },
+  {
+    "ContestID": "6-B",
+    "PlayerNumber": "6",
+    "QuestionPhrase": "technology"
+  }, 
+
+{
+    "ContestID": "8-A",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "Chat GPT"
+  },
+  {
+    "ContestID": "8-A",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Gemini"
+  },
+  {
+    "ContestID": "8-A",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Llama 4"
+  },
+  {
+    "ContestID": "8-A",
+    "PlayerNumber": "4",
+    "QuestionPhrase": "Grok"
+  },
+  {
+    "ContestID": "8-A",
+    "PlayerNumber": "5",
+    "QuestionPhrase": "xAI"
+  },
+  {
+    "ContestID": "8-A",
+    "PlayerNumber": "6",
+    "QuestionPhrase": "Google"
+  },
+  {
+    "ContestID": "8-A",
+    "PlayerNumber": "7",
+    "QuestionPhrase": "Open AI"
+  },
+  {
+    "ContestID": "8-A",
+    "PlayerNumber": "8",
+    "QuestionPhrase": "Meta"
+  },
+  {
+    "ContestID": "8-B",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "Panaya"
+  },
+  {
+    "ContestID": "8-B",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Topaz"
+  },
+  {
+    "ContestID": "8-B",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Cobalt"
+  },
+  {
+    "ContestID": "8-B",
+    "PlayerNumber": "4",
+    "QuestionPhrase": "Finacle"
+  },
+  {
+    "ContestID": "8-B",
+    "PlayerNumber": "5",
+    "QuestionPhrase": "Cloud"
+  },
+  {
+    "ContestID": "8-B",
+    "PlayerNumber": "6",
+    "QuestionPhrase": "Banking"
+  },
+  {
+    "ContestID": "8-B",
+    "PlayerNumber": "7",
+    "QuestionPhrase": "Automation"
+  },
+  {
+    "ContestID": "8-B",
+    "PlayerNumber": "8",
+    "QuestionPhrase": "AI"
+  }
+]
