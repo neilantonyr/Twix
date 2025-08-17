@@ -1,0 +1,32 @@
+[
+  {
+    "ContestID": "3-A",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "Be"
+  },
+  {
+    "ContestID": "3-A",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "The"
+  },
+  {
+    "ContestID": "3-A",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Navigator"
+  },
+  {
+    "ContestID": "3-B",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "Desirability"
+  },
+  {
+    "ContestID": "3-B",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Feasibility"
+  },
+  {
+    "ContestID": "3-B",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Viability"
+  }
+]
