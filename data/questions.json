@@ -29,32 +29,136 @@
     "PlayerNumber": "3",
     "QuestionPhrase": "Viability"
   },
+  {
+    "ContestID": "3-C",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "React"
+  },
  {
+    "ContestID": "3-C",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Angular"
+  },
+  {
+    "ContestID": "3-C",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Vue"
+  },
+  {
+    "ContestID": "3-D",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "Nile"
+  },
+ {
+    "ContestID": "3-D",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Amazon"
+  },
+  {
+    "ContestID": "3-D",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Yangtze"
+  },    
+  {
     "ContestID": "5-A",
     "PlayerNumber": "1",
-    "QuestionPhrase": "Launch"
+    "QuestionPhrase": "iPhone"
   },
   {
     "ContestID": "5-A",
     "PlayerNumber": "2",
-    "QuestionPhrase": "Ideation"
+    "QuestionPhrase": "Galaxy"
   },
   {
     "ContestID": "5-A",
     "PlayerNumber": "3",
-    "QuestionPhrase": "Testing"
+    "QuestionPhrase": "Pixel"
   },
   {
     "ContestID": "5-A",
     "PlayerNumber": "4",
-    "QuestionPhrase": "Development"
+    "QuestionPhrase": "ThinkPad"
   },
   {
     "ContestID": "5-A",
     "PlayerNumber": "5",
-    "QuestionPhrase": "Prototype"
+    "QuestionPhrase": "OnePlus"
   },    
-    
+ {
+    "ContestID": "5-B",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "iPadOS"
+  },
+  {
+    "ContestID": "5-B",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "MacOS"
+  },
+  {
+    "ContestID": "5-B",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "iPhoneOS"
+  },
+  {
+    "ContestID": "5-B",
+    "PlayerNumber": "4",
+    "QuestionPhrase": "VisionOS"
+  },
+  {
+    "ContestID": "5-B",
+    "PlayerNumber": "5",
+    "QuestionPhrase": "iOS"
+  },    
+ {
+    "ContestID": "5-C",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "Chrome"
+  },
+  {
+    "ContestID": "5-C",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Firefox"
+  },
+  {
+    "ContestID": "5-C",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Safari"
+  },
+  {
+    "ContestID": "5-C",
+    "PlayerNumber": "4",
+    "QuestionPhrase": "Opera"
+  },
+  {
+    "ContestID": "5-C",
+    "PlayerNumber": "5",
+    "QuestionPhrase": "Internet Explorer"
+  },    
+ {
+    "ContestID": "5-D",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "Zoom"
+  },
+  {
+    "ContestID": "5-D",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Microsoft Teams"
+  },
+  {
+    "ContestID": "5-D",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Slack"
+  },
+  {
+    "ContestID": "5-D",
+    "PlayerNumber": "4",
+    "QuestionPhrase": "Trello"
+  },
+  {
+    "ContestID": "5-D",
+    "PlayerNumber": "5",
+    "QuestionPhrase": "Google Meet"
+  },    
 {
     "ContestID": "6-A",
     "PlayerNumber": "1",
@@ -85,38 +189,96 @@
     "PlayerNumber": "6",
     "QuestionPhrase": "1983"
   }, 
-
  {
     "ContestID": "6-B",
     "PlayerNumber": "1",
-    "QuestionPhrase": "use"
+    "QuestionPhrase": "Microsoft"
   },
   {
     "ContestID": "6-B",
     "PlayerNumber": "2",
-    "QuestionPhrase": "Ethereum"
+    "QuestionPhrase": "Bengaluru"
   },
   {
     "ContestID": "6-B",
     "PlayerNumber": "3",
-    "QuestionPhrase": "Blockchain"
+    "QuestionPhrase": "Google"
   },
   {
     "ContestID": "6-B",
     "PlayerNumber": "4",
-    "QuestionPhrase": "and"
+    "QuestionPhrase": "Redmond"
   },
   {
     "ContestID": "6-B",
     "PlayerNumber": "5",
-    "QuestionPhrase": "Bitcoin"
+    "QuestionPhrase": "Biocon"
   },
   {
     "ContestID": "6-B",
     "PlayerNumber": "6",
-    "QuestionPhrase": "technology"
+    "QuestionPhrase": "Mountain View"
   }, 
-
+{
+    "ContestID": "6-C",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "Microsoft"
+  },
+  {
+    "ContestID": "6-C",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Bengaluru"
+  },
+  {
+    "ContestID": "6-C",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Google"
+  },
+  {
+    "ContestID": "6-C",
+    "PlayerNumber": "4",
+    "QuestionPhrase": "Redmond"
+  },
+  {
+    "ContestID": "6-C",
+    "PlayerNumber": "5",
+    "QuestionPhrase": "Biocon"
+  },
+  {
+    "ContestID": "6-C",
+    "PlayerNumber": "6",
+    "QuestionPhrase": "Mountain View"
+  }, 
+{
+    "ContestID": "6-D",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "Meta"
+  },
+  {
+    "ContestID": "6-D",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Ring"
+  },
+  {
+    "ContestID": "6-D",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Apple"
+  },
+  {
+    "ContestID": "6-D",
+    "PlayerNumber": "4",
+    "QuestionPhrase": "Glasses"
+  },
+  {
+    "ContestID": "6-D",
+    "PlayerNumber": "5",
+    "QuestionPhrase": "Oura"
+  },
+  {
+    "ContestID": "6-D",
+    "PlayerNumber": "6",
+    "QuestionPhrase": "Watch"
+  }, 
 {
     "ContestID": "8-A",
     "PlayerNumber": "1",
@@ -196,5 +358,86 @@
     "ContestID": "8-B",
     "PlayerNumber": "8",
     "QuestionPhrase": "AI"
+  },
+  {
+    "ContestID": "8-C",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "text prompts and answers"
+  },
+  {
+    "ContestID": "8-C",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "DALL-E-3"
+  },
+  {
+    "ContestID": "8-C",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Childrens stories"
+  },
+  {
+    "ContestID": "8-C",
+    "PlayerNumber": "4",
+    "QuestionPhrase": "Suno"
+  },
+  {
+    "ContestID": "8-C",
+    "PlayerNumber": "5",
+    "QuestionPhrase": "Generate pictures"
+  },
+  {
+    "ContestID": "8-C",
+    "PlayerNumber": "6",
+    "QuestionPhrase": "Goolge Gemini"
+  },
+  {
+    "ContestID": "8-C",
+    "PlayerNumber": "7",
+    "QuestionPhrase": "Compose music"
+  },
+  {
+    "ContestID": "8-C",
+    "PlayerNumber": "8",
+    "QuestionPhrase": "Chat GPT"
+  },
+  {
+    "ContestID": "8-D",
+    "PlayerNumber": "1",
+    "QuestionPhrase": "Toyota"
+  },
+  {
+    "ContestID": "8-D",
+    "PlayerNumber": "2",
+    "QuestionPhrase": "Germany"
+  },
+  {
+    "ContestID": "8-D",
+    "PlayerNumber": "3",
+    "QuestionPhrase": "Volkswagen"
+  },
+  {
+    "ContestID": "8-D",
+    "PlayerNumber": "4",
+    "QuestionPhrase": "India"
+  },
+  {
+    "ContestID": "8-D",
+    "PlayerNumber": "5",
+    "QuestionPhrase": "Kia"
+  },
+  {
+    "ContestID": "8-D",
+    "PlayerNumber": "6",
+    "QuestionPhrase": "Japan"
+  },
+  {
+    "ContestID": "8-D",
+    "PlayerNumber": "7",
+    "QuestionPhrase": "Tata"
+  },
+  {
+    "ContestID": "8-D",
+    "PlayerNumber": "8",
+    "QuestionPhrase": "South Korea"
   }
+    
 ]
